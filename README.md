@@ -21,3 +21,4 @@ Mi formación académica, respaldada por la realización de una tesis doctoral, 
 - **Nombre:** Germán Bosch
 - **LinkedIn:** [Germán Bosch](www.linkedin.com/in/german-bosch-estevez)
 
+
