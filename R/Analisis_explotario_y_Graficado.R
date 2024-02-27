@@ -2,8 +2,8 @@
 
 
 #####
-#####  Este es un ejemplo de tratamiento de datos, graficación y 
-#####  estadística utilizados en la tesis.
+#####  Este es un ejemplo de tratamiento de datos, graficaciÃ³n y 
+#####  estadÃ­stica utilizados en la tesis.
 #####
 
 
@@ -122,7 +122,7 @@ x
 
 doc <- read_xlsx()
 doc <- xl_add_vg(doc, sheet = "Feuil1", code = print(x), 
-                 width = 9, height = 4, left = 1, top = 2 ) # tamaño adaptado a 3 graficas de cajas
+                 width = 9, height = 4, left = 1, top = 2 ) # tamaÃ±o adaptado a 3 graficas de cajas
 print(doc, target = "graficas_FeSBi_cap_III.xlsx")
 
 
@@ -144,7 +144,7 @@ x
 
 doc <- read_xlsx()
 doc <- xl_add_vg(doc, sheet = "Feuil1", code = print(x), 
-                 width = 9, height = 4, left = 1, top = 2 ) # tamaño adaptado a 3 graficas de cajas
+                 width = 9, height = 4, left = 1, top = 2 ) # tamaÃ±o adaptado a 3 graficas de cajas
 print(doc, target = "graficas_FeSBi_cap_III.xlsx")
 
 
@@ -167,7 +167,7 @@ x
 
 doc <- read_xlsx()
 doc <- xl_add_vg(doc, sheet = "Feuil1", code = print(x), 
-                 width = 9, height = 4, left = 1, top = 2 ) # tamaño adaptado a 3 graficas de cajas
+                 width = 9, height = 4, left = 1, top = 2 ) # tamaÃ±o adaptado a 3 graficas de cajas
 print(doc, target = "graficas_FeSBi_cap_III.xlsx")
 
 
@@ -208,7 +208,7 @@ fuss$dia <- sub("dia6", "6",fuss$dia , fixed = TRUE)
 
 fuss$sd <-  as.numeric(fuss$sd)
 fuss$exp <-  as.numeric(fuss$exp)
-fuss$Días <- as.factor(fuss$dia)
+fuss$DÃ­as <- as.factor(fuss$dia)
 
 
 
@@ -225,10 +225,10 @@ fuss <- fuss %>% filter(!is.na(trat))
 exp_FIT <- fuss %>% filter(gen == "FIT")
 class(exp_FIT$exp)
 
-x <- ggplot(exp_FIT, aes(x = trat, y = exp , fill = Días)) + 
+x <- ggplot(exp_FIT, aes(x = trat, y = exp , fill = DÃ­as)) + 
   geom_bar (stat = "identity", position=position_dodge(width = 0.8), width = 0.95, color = "Black") +
   geom_errorbar(data = exp_FIT, aes( ymin = exp - sd , ymax = exp + sd, y = sd), width=.2,position=position_dodge(.8))+
-  theme_bw() +   labs(title  ="Expresión log de FIT    ", x = "Tratamiento", y = "Expr Log" )+scale_fill_manual(values =c("#FFFFFF", "#C4C4C4", "#000000")) +
+  theme_bw() +   labs(title  ="ExpresiÃ³n log de FIT    ", x = "Tratamiento", y = "Expr Log" )+scale_fill_manual(values =c("#FFFFFF", "#C4C4C4", "#000000")) +
   geom_text(aes(label = Sig, y = exp + sd + sd ), position = position_dodge(width = 0.8), 
             size = 8)
 
@@ -246,10 +246,10 @@ print(doc, target = "graficas_HFeG_6_B.xlsx")
 
 exp_FRO2 <- fuss %>% filter(gen == "FRO2")
 
-x <- ggplot(exp_FRO2, aes(x = trat, y = exp , fill = Días)) + 
+x <- ggplot(exp_FRO2, aes(x = trat, y = exp , fill = DÃ­as)) + 
   geom_bar (stat = "identity", position=position_dodge(width = 0.8), width = 0.95, color = "Black") +
   geom_errorbar(data = exp_FRO2, aes( ymin = exp - sd , ymax = exp + sd, y = sd), width=.2,position=position_dodge(.8))+
-  theme_bw() +   labs(title  ="Expresión log de FRO1    ", x = "Tratamiento", y = "Expr Log" )+scale_fill_manual(values =c("#FFFFFF", "#C4C4C4", "#000000")) +
+  theme_bw() +   labs(title  ="ExpresiÃ³n log de FRO1    ", x = "Tratamiento", y = "Expr Log" )+scale_fill_manual(values =c("#FFFFFF", "#C4C4C4", "#000000")) +
   geom_text(aes(label = Sig, y = exp + sd + sd ), position = position_dodge(width = 0.8), 
             size = 8)
 
@@ -307,7 +307,7 @@ x <- ggplot(data = merge_Rb, aes(x = Dia, y = mean_pmol.ml, color  =  Tratamient
   theme_bw() + 
   scale_color_manual(values=c('#ED0000FF','#AD002AFF','#0D3B66','#925E9FFF','#00743F','#8BC34A','#FFC300FF','#B8860B'))+
   scale_x_continuous(n.breaks = 6) + 
-  labs(title  ="  Riboflavinas en SN  ", x = "Días", y = " pmol/ml" ) 
+  labs(title  ="  Riboflavinas en SN  ", x = "DÃ­as", y = " pmol/ml" ) 
 
 x
 
@@ -330,7 +330,7 @@ x <- ggplot(data = merge_krb, aes(x = Dia, y = mean_pmol.ml, color  =  Tratamien
   theme_bw() + 
   scale_color_manual(values=c('#ED0000FF','#AD002AFF','#0D3B66','#925E9FFF','#00743F','#8BC34A','#FFC300FF','#B8860B'))+
   scale_x_continuous(n.breaks = 6) + 
-  labs(title  ="  4-keto-riboflavinas en SN  ", x = "Días", y = " pmol/ml" ) 
+  labs(title  ="  4-keto-riboflavinas en SN  ", x = "DÃ­as", y = " pmol/ml" ) 
 
 x
 
@@ -369,7 +369,7 @@ df_1$trat <- factor(df_1$trat,levels =  c("Fe+", "Bic+", "Fe-", "Bic-", "FeS1", 
 x <- ggplot(data = df_1, aes(x = t, y = mean_int, color  = trat)) + geom_line(size=1)+ geom_point(size=3)+
   geom_errorbar(data = df_1, aes( ymin = mean_int - sd_int , ymax = mean_int + sd_int, y = mean_int), width=0.1,size=1) +
   theme_bw() + scale_color_manual(values=c('#ED0000FF','#AD002AFF','#0D3B66','#925E9FFF','#00743F','#8BC34A','#FFC300FF','#B8860B'))+
-  labs(title  ="Intensidad a 520 nm con excitacion 370", x = "Días", y = "Intensidad" ) 
+  labs(title  ="Intensidad a 520 nm con excitacion 370", x = "DÃ­as", y = "Intensidad" ) 
 
 x
 
@@ -439,7 +439,7 @@ merge$trat <- factor(merge$trat,levels =  c("Fe+", "Bic+", "Fe-", "Bic-", "F1", 
 x <- ggplot(data = merge, aes(x = t, y = mean_chl, color  = trat)) + geom_line(size=1)+ geom_point(size=3)+
   geom_errorbar(data = merge, aes( ymin = mean_chl - sd_chl , ymax = mean_chl + sd_chl, y = mean_chl), width=0.1,size=1) +
   theme_bw() + scale_color_manual(values=c('#ED0000FF','#AD002AFF','#0D3B66','#925E9FFF','#00743F','#8BC34A','#FFC300FF','#B8860B'))+
-  labs(title  ="Nivel de Chl en la primera hoja", x = "Días", y = "Chl en hoja" ) +
+  labs(title  ="Nivel de Chl en la primera hoja", x = "DÃ­as", y = "Chl en hoja" ) +
   geom_text(aes(label = groups, y = mean_chl + sd_chl + sd_chl/2 ),  
             size = 5)
 
@@ -589,14 +589,14 @@ merge_hoja$element <- factor(merge_hoja$element,levels =  c("Fe", "Cu", "Zn", "M
 x <- ggplot (merge_hoja,  aes(x = trat, y = ug_g.x, fill = trat)) + geom_boxplot() + 
   facet_wrap(~ element, scales = "free" ) + 
   theme_bw() +    scale_fill_manual(values=c('#ED0000FF','#AD002AFF','#0D3B66','#925E9FFF','#00743F','#8BC34A','#FFC300FF','#B8860B'))+
-  labs(title  ="Microelementos en hoja ", x = "Tratamiento", y = "µg/g" ) + theme_bw() + 
+  labs(title  ="Microelementos en hoja ", x = "Tratamiento", y = "Âµg/g" ) + theme_bw() + 
   geom_text(aes(label = groups, y = ug_g.y + ug_g.y/5 ),  
             size = 5)
 
 x
 doc <- read_xlsx()
 doc <- xl_add_vg(doc, sheet = "Feuil1", code = print(x), 
-                 width = 7, height = 5, left = 1, top = 2 ) # tamaño adaptado a 3 graficas de cajas
+                 width = 7, height = 5, left = 1, top = 2 ) # tamaÃ±o adaptado a 3 graficas de cajas
 print(doc, target = "graficas_FeSBi.xlsx")
 
 
@@ -618,7 +618,7 @@ qr_3y6d <- qr_3y6d %>%  filter(!is.na(trat))
 
 ggplot ( qr_3y6d, aes(x = trat, y = mmol...gPF...hora, fill = trat)) + 
   geom_boxplot() + facet_wrap(~ t )+
-  theme_bw() +   scale_fill_lancet()+ labs(title  ="Actividad QR en condiciones normales", x = "Días", y = "mmol/gPF/hora    " )
+  theme_bw() +   scale_fill_lancet()+ labs(title  ="Actividad QR en condiciones normales", x = "DÃ­as", y = "mmol/gPF/hora    " )
 
 
 # Estadistica
@@ -662,7 +662,7 @@ merge$trat <- factor(merge$trat,levels =  c("Fe+", "Bic+","Fe-", "Bic-", "F1", "
 x <- ggplot ( merge, aes(x = trat, y = mmol...gPF...hora.x, fill = trat)) + 
   geom_boxplot() + facet_wrap(~ t , scales="fixed" ) + 
   theme_bw() +      scale_fill_manual(values=c('#ED0000FF','#AD002AFF','#0D3B66','#925E9FFF','#00743F','#8BC34A','#FFC300FF','#B8860B'))+
-  labs(title  ="Actividad QR ", x = "Días", y = "mmol/gPF/hora    " ) +
+  labs(title  ="Actividad QR ", x = "DÃ­as", y = "mmol/gPF/hora    " ) +
   geom_text(aes(label = groups, y = mmol...gPF...hora.y + mmol...gPF...hora.y/2 ),  
             size = 5)
 
@@ -714,7 +714,7 @@ ph_4$trat <- factor(ph_4$trat,levels = c("Fe+", "Bic+", "Fe-", "Bic-", "FeS1", "
 x <- ggplot( ph_4, aes( x = t, y = mean, color = trat)) + geom_line(size=1)+ 
   geom_errorbar(data = ph_4, aes( ymin = mean - sd , ymax = mean + sd, y = mean), width=0.1,size=1) +
   theme_bw() +   scale_color_manual(values=c('#0D3B66','#ED0000FF','#00743F','#FFC300FF'))+  scale_x_continuous(n.breaks = 7) + 
-  labs(title  ="pH de la SN", x = "Días", y = "pH" )
+  labs(title  ="pH de la SN", x = "DÃ­as", y = "pH" )
 
 x
 doc <- read_xlsx()
