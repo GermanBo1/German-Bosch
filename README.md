@@ -1,5 +1,31 @@
 # Germán Bosch - Data Scientist Portfolio
 
+I'm Germán Bosch, Ph.D. in Natural and Applied Sciences from the University of Navarra, and passionate about data analysis. This is my portfolio on GitHub, where I share projects and experiences related to my career in data science.
+
+## About Me
+
+One of the advantages of my background as a predoctoral researcher at the University of Navarra is the ability to structure my mind in a more analytical way. Over the past four years, I immersed myself in the world of data analysis while completing my doctoral thesis. This process involved tasks such as data cleaning, exploratory analysis, graph creation, and statistical application using R in a self-taught manner. After completing my thesis, I decided to shift my career focus and pursued my passion for data, leading me to undertake the Master's in Data Science at Kschool to strengthen my knowledge and skills in this field.
+
+## Experience and Education
+
+My academic background, supported by the completion of a doctoral thesis, has significantly developed my analytical ability. During this process, I acquired technical skills such as data manipulation and cleaning with R, as well as statistical and visualization techniques. Furthermore, my experience in researching and manipulating complex datasets has provided me with the necessary skills to interpret, manipulate, and present large datasets effectively.
+
+## Skills
+
+- Analytical ability to interpret and manipulate large datasets.
+- Experience in applying statistical techniques and data visualization with R.
+- Effective communication and project management skills.
+
+## Contact
+
+- **Name:** Germán Bosch
+- **LinkedIn:** [Germán Bosch](www.linkedin.com/in/german-bosch-estevez)
+
+
+
+
+# Germán Bosch - Data Scientist Portfolio
+
 Soy Germán Bosch, Doctor en Ciencias Naturales y Aplicadas por la Universidad de Navarra y un apasionado del análisis de datos. Este es mi portfolio en GitHub, donde comparto proyectos y experiencias relacionadas con mi carrera en ciencia de datos.
 
 ## Acerca de mí
