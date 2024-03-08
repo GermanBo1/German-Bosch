@@ -23,7 +23,6 @@ My academic background, supported by the completion of a doctoral thesis, has si
 
 
 
-
 # Germán Bosch - Data Scientist Portfolio
 
 Soy Germán Bosch, Doctor en Ciencias Naturales y Aplicadas por la Universidad de Navarra y un apasionado del análisis de datos. Este es mi portfolio en GitHub, donde comparto proyectos y experiencias relacionadas con mi carrera en ciencia de datos.
